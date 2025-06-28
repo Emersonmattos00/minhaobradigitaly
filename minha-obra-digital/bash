@@ -2,3 +2,5 @@ npm i -g vercel
 vercel --prod
 npm install firebase
 npm install -g firebase-tools
+npm install next@14 react react-dom tailwindcss postcss autoprefixer
+npm install next-auth @prisma/client prisma
