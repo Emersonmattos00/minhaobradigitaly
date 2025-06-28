@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Marca d'água de fundo */
+.watermark {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Ocupa toda a tela */
+  width: 100vw;
+  height: 100vh;
+
+  /* Sua imagem de fundo */
+  background-image: url("/imagens/imagem.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  /* Leve transparência para não prejudicar o conteúdo */
+  opacity: 0.1;
+
+  /* Não intercepta cliques para não prejudicar botões e links */
+  pointer-events: none;
+
+  /* Garanta que fique atrás de todos */
+  z-index: -1;
+
+  /* Para que a imagem de fundo não se mova com o scroll */
+  background-attachment: fixed;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .watermark {
+    /* Altera o ajuste para telas menores, assim não "amassa" a imagem */
+    background-size: contain;
+
+    /* Opacidade mais leve para dispositivos móveis */
+    opacity: 0.08;
+  }
+}

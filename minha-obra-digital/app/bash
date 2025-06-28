@@ -1,0 +1,2 @@
+npm install next@14 react react-dom tailwindcss postcss autoprefixer
+npm install next-auth @prisma/client prisma
